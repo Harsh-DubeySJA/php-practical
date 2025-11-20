@@ -1,0 +1,23 @@
+label, input {
+    display: inline;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    width: 20% !important;
+}
+
+button {
+    display: block;
+}
+
+#login-issue {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}

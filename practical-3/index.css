@@ -1,0 +1,30 @@
+label, input {
+    display: inline;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    width: 20% !important;
+}
+
+button {
+    display: block;
+}
+
+pre {
+    display: inline;
+    margin-bottom: 0;
+    background: Canvas;
+    border-left: 0;
+}
+
+.result {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practical 4</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" />
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <form action="login.php" method="post" id="login">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+            <br />
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password" required>
+            <button type="submit">Log in</button>
+        </form>
+
+        <div class="row" id="login-issue">
+            <div class="column">
+                <span id="error">"Username or Password is wrong."</span>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

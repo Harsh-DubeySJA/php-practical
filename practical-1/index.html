@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practical 1</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" />
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+
+        <h1>Enter number to reverse</h1>
+
+        <form action="ReverseNumber.php" method="post" id="numberForm">
+            <label for="inputNumber">Enter a Number:</label>
+            <input type="number" id="inputNumber" name="number" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="reversed">
+            <strong>Reverse:</strong> <span id="result"></span>
+        </p>
+
+        <script src="index.js"></script>
+
+    </body>
+</html>

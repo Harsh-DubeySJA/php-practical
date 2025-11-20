@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practical 2</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" />
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <form action="Sum.php" method="post" id="sumInput">
+            <label for="firstNumber">First Number:<pre>  </pre></label>
+            <input type="number" name="firstNumber" id="firstNumber" required>
+            <br />
+            <label for="secondNumber">Second Number:</label>
+            <input type="number" name="secondNumber" id="secondNumber" required>
+            <button type="submit">Evaluate</button>
+        </form>
+
+        <p id="sum">
+            <strong>Sum:</strong> <span id="result"></span>
+        </p>
+
+        <script src="index.js"></script>
+    </body>
+</html>

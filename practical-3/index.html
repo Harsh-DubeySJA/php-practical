@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practical 2</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" />
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <h3>1. String Length</h3>
+        <form action="StringManipulation.php" method="post" id="length">
+            <label for="stringLength">String:<pre> </pre></label>
+            <input type="text" name="stringLength" id="stringLength" required>
+            <button type="submit">Get Length</button>
+        </form>
+        <p id="lengthResultContainer" class="result">
+            <strong>Result:</strong> <span id="lengthResult"></span>
+        </p>
+
+        <hr/>
+        
+        <h3>2. Substring Check</h3>
+        <form action="StringManipulation.php" method="post" id="substringInput">
+            <label for="string">String:<pre> </pre></label>
+            <input type="text" name="string" id="string" required>
+            <br />
+            <label for="substring">Pattern:</label>
+            <input type="text" name="substring" id="substring" required>
+            <button type="submit">Check</button>
+        </form>
+        <p id="substringInputResultContainer" class="result">
+            <strong>Result:</strong> <span id="substringInputResult"></span>
+        </p>
+        
+        <hr/>
+
+        <h3>3. Remove Whitespace</h3>
+        <form action="StringManipulation.php" method="post" id="space">
+            <label for="whitespace">String:<pre> </pre></label>
+            <input type="text" name="whitespace" id="whitespace" required>
+            <button type="submit">Remove Whitespace</button>
+        </form>
+        <p id="spaceResultContainer" class="result">
+            <strong>Result:</strong> <span id="spaceResult"></span>
+        </p>
+        
+        <hr/>
+
+        <h3>4. Is String</h3>
+        <form action="StringManipulation.php" method="post" id="validString">
+            <label for="isString">String:<pre> </pre></label>
+            <input type="text" name="isString" id="isString">
+            <button type="submit">Check</button>
+        </form>
+        <p id="validStringResultContainer" class="result">
+            <strong>Result:</strong> <span id="validStringResult"></span>
+        </p>
+        
+        <hr/>
+
+        <h3>5. Title Case</h3>
+        <form action="StringManipulation.php" method="post" id="title">
+            <label for="titleCase">String:<pre> </pre></label>
+            <input type="text" name="titleCase" id="titleCase">
+            <button type="submit">Check</button>
+        </form>
+        <p id="titleResultContainer" class="result">
+            <strong>Result:</strong> <span id="titleResult"></span>
+        </p>
+
+        <script src="index.js"></script>
+    </body>
+</html>
