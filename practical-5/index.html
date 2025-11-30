@@ -4,9 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical 5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css" />
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
+    <h2>Name: Harsh Dubey</h2>
+    <h2>Roll No: 20232713</h2>
+    <form action="student_registration.php" method="post">
+    <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+
+        <label>Gender:</label>
+        <input type="radio" id="gender_male" name="gender" value="Male" required>
+        <label for="gender_male" style="display: inline;">Male</label>
+        
+        <input type="radio" id="gender_female" name="gender" value="Female">
+        <label for="gender_female" style="display: inline;">Female</label>
+        
+        <input type="radio" id="gender_other" name="gender" value="Other">
+        <label for="gender_other" style="display: inline;">Other</label>
+
+        <label for="roll_number">Roll Number:</label>
+        <input type="number" id="roll_number" name="roll_number" required>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" id="phone_number" name="phone_number" required pattern="[0-9]{10,15}" title="Phone number must be between 10 and 15 digits.">
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">-- Select Course --</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="B.Voc. Software Development">B.Voc. Software Development</option>
+            <option value="BA (Program)">BA (Program)</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Arts">Arts</option>
+        </select>
+
+        <button type="submit" name="submit_post">Submit</button>
+    </form>
     <form action="student_registration.php" method="get">
+        <label for="roll_number">Roll Number:</label>
+        <input type="number" id="roll_number" name="id" required>
         <button type="submit">Submit</button>
     </form>
 </body>

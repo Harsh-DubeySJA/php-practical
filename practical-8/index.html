@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery Selector Demo</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+
+            .item {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            #unique-id { color: #00008b; }
+            .primary { background-color: #f0f8ff; }
+            button { padding: 8px 15px; cursor: pointer; }
+        
+            .modified {
+                border: 2px solid green !important;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Name: Harsh Dubey</h2>
+        <h2>Roll No: 20232713</h2>
+
+        <h1>jQuery Selector Demo</h1>
+
+        <div id="unique-id" class="item primary">
+            ID Selector: I have the ID 'unique-id'.
+        </div>
+
+        <p class="data-point item">
+            Class Selector: I have the class 'data-point'.
+        </p>
+        <div class="data-point item">
+            Class Selector: I also have the class 'data-point'.
+        </div>
+
+        <p class="item">
+            Element Selector: I am a standard &lt;p&gt; tag.
+        </p>
+
+        <span class="item" data-info="secret">
+            Attribute Selector: I have the attribute 'data-info'.
+        </span>
+
+        <hr>
+        <button id="run-selectors">Run jQuery Selectors</button>
+
+        <script>
+            $(document).ready(function() {
+
+                $("#run-selectors").click(function() {
+                    
+                    $("#unique-id").css("color", "red")
+                                .text("ID Selected: My text is now red!");
+                    $(".data-point").css("background-color", "yellow")
+                                    .addClass("modified"); 
+                    $("p").css("font-style", "italic");
+                    $("[data-info]").css("border-color", "green")
+                                    .text("Attribute Selected: I have a green border!");
+                    $(this).prop("disabled", true).text("Selectors Ran!");
+                });
+
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .container { max-width: 600px; margin: 50px auto; padding: 20px; border: 1px solid #007bff; border-radius: 5px; }
+        #results-list li { margin-bottom: 10px; font-size: 1.1em; }
+        #results-list strong { display: inline-block; width: 80px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Submitted Data Display</h2>
+        <ul id="results-list">
+            </ul>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                const results = regex.exec(location.search);
+                return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
+
+            const jsonString = getUrlParameter('data');
+            const $resultsList = $("#results-list");
+
+            if (jsonString) {
+                try {
+                    const formData = JSON.parse(jsonString);
+
+                    $resultsList.append("<li><strong>Name:</strong> " + formData.name + "</li>");
+                    $resultsList.append("<li><strong>Email:</strong> " + formData.email + "</li>");
+                    $resultsList.append("<li><strong>Age:</strong> " + formData.age + "</li>");
+                    
+                } catch (e) {
+                    $("#error-message").text("Error: Could not parse submitted data.");
+                }
+            } else {
+                $("#error-message").text("No data was passed to this page.");
+            }
+        });
+    </script>
+
+</body>
+</html>

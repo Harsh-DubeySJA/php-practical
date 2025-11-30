@@ -50,6 +50,7 @@ function setupFormHandler(formId) {
 
 setupFormHandler('length');
 setupFormHandler('substringInput');
+setupFormHandler('replaceString');
 setupFormHandler('space');
 setupFormHandler('validString');
 setupFormHandler('title');

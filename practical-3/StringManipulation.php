@@ -22,6 +22,16 @@
         die();
     }
 
+    if (isset($_POST['string']) && isset($_POST['search']) && isset($_POST['replace'])) {
+        $input = $_POST['string'];
+        $search = $_POST['search'];
+        $replace = $_POST['replace'];
+        $new_string = str_replace($search, $replace, $input);
+        http_response_code(200);
+        echo "After replacing: " . $new_string;
+        die();
+    }
+
     if (isset($_POST['whitespace'])) {
         http_response_code(200);
         echo trim($_POST['whitespace']);

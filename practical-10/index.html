@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        form { max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input[type="text"], input[type="email"] { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+        button { margin-top: 20px; padding: 10px 15px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Name: Harsh Dubey</h2>
+    <h2>Roll No: 20232713</h2>
+
+    <form id="dataForm">
+        <h2>Enter Your Details</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <button type="submit">Submit and Go to Next Page</button>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $("#dataForm").submit(function(event) {
+                event.preventDefault();
+                const formData = {
+                    name: $("#name").val(),
+                    email: $("#email").val(),
+                    age: $("#age").val()
+                };
+                const jsonString = JSON.stringify(formData);
+                const encodedData = encodeURIComponent(jsonString);
+                const redirectUrl = "display.html?data=" + encodedData;
+                window.location.href = redirectUrl;
+            });
+        });
+    </script>
+
+</body>
+</html>

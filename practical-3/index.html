@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
+        <h2>Name: Harsh Dubey</h2>
+        <h2>Roll No: 20232713</h2>
         <h3>1. String Length</h3>
         <form action="StringManipulation.php" method="post" id="length">
             <label for="stringLength">String:<pre> </pre></label>
@@ -35,7 +37,23 @@
         
         <hr/>
 
-        <h3>3. Remove Whitespace</h3>
+        <h3>3. Replace String</h3>
+        <form action="StringManipulation.php" method="post" id="replaceString">
+            <label for="string">String:<pre> </pre></label>
+            <input type="text" name="string" id="string" required>
+            <label for="search">Search:<pre> </pre></label>
+            <input type="text" name="search" id="search" required>
+            <label for="replace">Replace:<pre> </pre></label>
+            <input type="text" name="replace" id="replace" required>
+            <button type="submit">Replace String</button>
+        </form>
+        <p id="replaceStringResultContainer" class="result">
+            <strong>Result:</strong> <span id="replaceStringResult"></span>
+        </p>
+
+        <hr />
+
+        <h3>4. Remove Whitespace</h3>
         <form action="StringManipulation.php" method="post" id="space">
             <label for="whitespace">String:<pre> </pre></label>
             <input type="text" name="whitespace" id="whitespace" required>
@@ -47,7 +65,7 @@
         
         <hr/>
 
-        <h3>4. Is String</h3>
+        <h3>5. Is String</h3>
         <form action="StringManipulation.php" method="post" id="validString">
             <label for="isString">String:<pre> </pre></label>
             <input type="text" name="isString" id="isString">
@@ -59,7 +77,7 @@
         
         <hr/>
 
-        <h3>5. Title Case</h3>
+        <h3>6. Title Case</h3>
         <form action="StringManipulation.php" method="post" id="title">
             <label for="titleCase">String:<pre> </pre></label>
             <input type="text" name="titleCase" id="titleCase">
